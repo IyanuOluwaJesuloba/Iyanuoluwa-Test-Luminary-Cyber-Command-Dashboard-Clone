@@ -1,4 +1,4 @@
-Here is a **professional, time-boxed technical assessment** specifically designed to vet front-end developers who claim to be strong with **Next.js 14+ (App Router)** and **Tailwind CSS**, using the exact UI you showed from **Luminary (Ajaeq new education platform)**. 
+Here is a **professional, time-boxed technical assessment** specifically designed to vet front-end developers strong with **Next.js 14+ (App Router)** and **Tailwind CSS**, using the exact UI you showed from **Luminary (Ajaeq new education platform)**. 
 
 Figma Link: https://www.figma.com/design/3EGLSiRWy7rUZAVNNji4EQ/Frontend-Vetting?node-id=0-1&t=MehegjCY95VCmTfv-1
 
@@ -11,7 +11,7 @@ Figma Link: https://www.figma.com/design/3EGLSiRWy7rUZAVNNji4EQ/Frontend-Vetting
 
 
 ### Deliverables (must be 100% functional & pixel-perfect)
-Clone this exact dashboard: https://www.figma.com/design/3EGLSiRWy7rUZAVNNji4EQ/Frontend-Vetting?node-id=0-1&t=MehegjCY95VCmTfv-1  
+Clone this exact dashboard: https://www.figma.com/design/3EGLSiRWy7rUZAVNNji4EQ/Frontend-Vetting?node-id=0-1&t=MehegjCY95VCmTfv-1 (Cyber Command section)  
 You must reproduce the following screens/views from the screenshots you posted:
 
 1. **Main Dashboard Overview** 
@@ -62,7 +62,7 @@ You must reproduce the following screens/views from the screenshots you posted:
 
 Submission will be on GitHub. Please follow these steps to submit your work:
 
-1.  **Clone this Repository**: Clone/fork this GitHub repository https://github.com/AJAEQ/Test-Luminary-Cyber-Command-Dashboard-Clone-.git.
+1.  **Clone the Repository**: Clone/fork the provided GitHub repository (link will be shared with you).
 2.  **Create a Branch**: Create a new branch for your work. Use a naming convention like `feature/your-name-submission`.
 3.  **Commit History**: 
     -   Commit often with meaningful messages. We check commit history to see your development process.
