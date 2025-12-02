@@ -3,7 +3,7 @@ Here is a **professional, time-boxed technical assessment** specifically designe
 Figma Link: https://www.figma.com/design/3EGLSiRWy7rUZAVNNji4EQ/Frontend-Vetting?node-id=0-1&t=MehegjCY95VCmTfv-1
 
 ### Test Title: Luminary Cyber Command Dashboard Clone  
-**Submission DeadLine:** 28th November, 2025 | 23:00hrs (strict)  
+**Submission DeadLine:** 8th December, 2025 | 23:00hrs (strict)  
 **Tech stack (required):**  
 - Next.js 14+ (App Router only – no Pages Router)  
 - TypeScript (strict mode)  
