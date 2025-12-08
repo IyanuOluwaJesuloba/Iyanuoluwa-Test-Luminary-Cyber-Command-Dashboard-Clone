@@ -456,11 +456,11 @@ export default function Home() {
                     <div className="absolute inset-6 rounded-full bg-[#040817]" />
                     <div className="relative z-10 text-center">
                       <Image
-                        src="/ellipse.png"
+                        src="/Ellipse.png"
                         alt="Ellipse"
                         width={20}
                         height={20}
-                        className="w-[20px] h-[20px]"
+                        className=""
                       />
                     </div>
                     <div className="absolute -right-20 top-1/2 w-[192px] h-[67px] -translate-y-1/2 rounded-2xl border border-white/10 bg-[#0D1C28] px-4 py-3 text-xs text-white shadow-lg">
