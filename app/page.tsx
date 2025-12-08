@@ -188,7 +188,7 @@ export default function Home() {
     <div className={`${inter.className} min-h-screen bg-[#040E16] text-white`}>
       <Sidebar />
       <div className="ml-16">
-        <Header />
+        <Header breadcrumbTitle="Cyber Command"/>
         <div className="px-6 py-4">
           {/* Tab Navigation */}
           <nav className="flex flex-wrap gap-2 text-xs ml-4">
@@ -448,7 +448,7 @@ export default function Home() {
               <div className="rounded-[14px] border border-[#FFFFFF14] bg-[#040E16] p-6 w-[615px] h-[880px]">
                 <div className="flex items-center justify-center w-[133px] h-[31px] text-[#8282E10D] border border-[#E2E8FF0D] rounded-lg bg-[#8282E10D]">
                   <p className="text-[10px] font-medium text-[#8282E1]">
-                    Clear skill progression
+                    Career skill progression
                   </p>
                 </div>
                 <div className="relative mt-6 flex min-h-[360px] items-center justify-center">

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Sidebar from '../../components/sidebar';
 import Header from '../../components/header';
 
+
 type Course = {
   id: number;
   title: string;
@@ -83,7 +84,7 @@ export default function Clusters() {
       {/* Header */}
       <Sidebar/>
       <div className='ml-16'>
-      <Header/>
+      <Header breadcrumbTitle='Offensive Operations...'/>
 
       {/* Main Content */}
       <main className="ml-1 p-8  pb-13">
@@ -107,7 +108,8 @@ export default function Clusters() {
             
             <div className="relative">
               {/* Background cyber face image */}
-              <div className="relative w-200 h-[692px]">
+              <div className="relative">
+                <div className='relative w-200 h-[692px]'>
                 <Image
                   src="/cyber-face.png"
                   alt="Cyber Face"
@@ -119,6 +121,15 @@ export default function Clusters() {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
+                </div>
+                <div className="absolute inset-0">
+                  <Image
+                    src="/half.png"
+                    alt="Neon Circuit Overlay"
+                    fill
+                    className="object- object- opacity-80  w-2 h-2"
+                    sizes=""
+                  />
                 <div className=""></div>
               </div>
             </div>
@@ -143,6 +154,17 @@ export default function Clusters() {
               </div>
             </div>
           </div>
+           </div>
+          {/* Padlock Image - Top Right Corner */}
+                <div className="absolute bottom-51 right-5 w-[235.39px] h-[235.39px] opacity-70 pointer-events-none">
+                  <Image
+                    src="/full.png"
+                    alt="Security Padlock"
+                    fill
+                    className="object-contain"
+                    sizes="200px"
+                  />
+                </div>
 
           {/* Course List */}
           <div className="relative z-10">
@@ -228,7 +250,7 @@ export default function Clusters() {
                       <div className="flex gap-2">
                       <div className="mt-2 w-[300.93px] h-[14.55px] rounded-full bg-white/5">
                         <div
-                          className="rounded-full bg-linear-to-r "
+                          className="rounded-full bg-linear-to-r h-full from-cyan-400 to-blue-600"
                           style={{ width: `${30 + index * 15}%` }}
                         />
                       </div>

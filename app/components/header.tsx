@@ -1,9 +1,16 @@
-import React from 'react';
+"use client";
 import { Search } from 'lucide-react';
+import { usePathname } from "next/navigation";
+
 import Image from 'next/image';
 
+interface HeaderProps {
+  breadcrumbTitle?: string;
+}
 
-export default function Header(){
+export default function Header({ breadcrumbTitle }: HeaderProps){
+  const pathname = usePathname();
+
 return(
 <div className=''>
       <header className="  px-6 py-4 flex items-center justify-between">
@@ -12,7 +19,7 @@ return(
           <div className="flex pl-5 items-center gap-2 text-xs text-gray-400">
             <span>Education</span>
             <span>›</span>
-            <span className="text-[#E2E8FF]">Offensive Operations...</span>
+            <span className="text-[#E2E8FF]">{breadcrumbTitle}</span>
           </div>
         </div>
         <div className="flex items-center gap-6">

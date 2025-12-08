@@ -74,7 +74,7 @@ export default function CyberSecurityDashboard() {
       {/* Header */}
       <Sidebar/>
       <div className='ml-16'>
-      <Header/>
+      <Header breadcrumbTitle='Offensive Operations...'/>
 
       {/* Main Content */}
       <main className="ml-1 p-8 w-[px] h-[960px]">
@@ -180,7 +180,7 @@ export default function CyberSecurityDashboard() {
                         className="object-contain"
                       />
                     ) : (
-                      course.icon ?? '📘'
+                      course.icon ?? ''
                     )}
                   </div>
                   
