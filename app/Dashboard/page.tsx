@@ -177,7 +177,7 @@ export default function Dashboard() {
   ];
 
   const careerSkills = [
-    { name: 'Network Penetration Tester', progress: 80, color: 'bg-purple-500' },
+    { name: 'Network Penetration Tester', progress: 80, color: 'bg-[#E2E8FF1A]' },
     { name: 'Red Teamer', progress: 40, color: 'bg-red-500' },
     { name: 'Exploit Developer', progress: 35, color: 'bg-pink-500' },
     { name: 'Application Security Eng...', progress: 95, color: 'bg-green-500' },
@@ -482,7 +482,7 @@ export default function Dashboard() {
                                 Career skill progression
                               </p>
                             </div>
-                            <div className="relative mt-6 flex min-h-[360px] items-center justify-center">
+                            <div className="relative mt-6 flex min-h-[360px] items-center justify-center tooltip">
                               <div className="relative flex h-64 w-64 items-center justify-center rounded-full bg-[conic-gradient(#1CB948_0deg,#2D47C8_50deg,#C32DC8CC_100deg,#30FFFFB2_150deg,#30FFFFB2_200deg,#C82D2F_250deg,#9D9D9D_300deg,#FF7E05CC_360deg)]">
                                 <div className="absolute inset-6 rounded-full bg-[#040817]" />
                                 

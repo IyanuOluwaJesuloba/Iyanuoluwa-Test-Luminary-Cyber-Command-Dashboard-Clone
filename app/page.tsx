@@ -458,8 +458,8 @@ export default function Home() {
                       <Image
                         src="/ellipse.png"
                         alt="Ellipse"
-                        width={0}
-                        height={0}
+                        width={20}
+                        height={20}
                         className="w-[20px] h-[20px]"
                       />
                     </div>
