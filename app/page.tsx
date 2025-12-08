@@ -192,9 +192,9 @@ export default function Home() {
       </div>
       <div className="w-full md:ml-20 md:w-[calc(100%-5rem)]">
         <Header breadcrumbTitle="Cyber Command"/>
-        <div className="px-4 sm:px-6 py-4">
+        <div className="px-2 sm:px-6 py-3 sm:py-4">
           {/* Tab Navigation */}
-          <nav className="flex flex-wrap gap-2 text-xs ml-2 sm:ml-4">
+          <nav className="flex flex-wrap gap-1 sm:gap-2 text-xs ml-0 sm:ml-4">
             {tabs.map((tab, index) => (
               <button
                 key={tab}
@@ -271,8 +271,8 @@ export default function Home() {
                         <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-slate-400">
                           <span>{stat.label}</span>
                         </div>
-                        <div className="flex gap-2">
-                          <div className="mt-2 w-[153px] h-[5px] rounded-full bg-white/5">
+                        <div className="flex gap-1 sm:gap-2">
+                          <div className="mt-2 w-[100px] sm:w-[153px] h-[5px] rounded-full bg-white/5">
                             <div
                               className="rounded-full bg-linear-to-r from-cyan-400 to-blue-600"
                               style={{
@@ -280,7 +280,7 @@ export default function Home() {
                               }}
                             />
                           </div>
-                          <p className="text-[#E2E8FF80] text-[8px] mt-1.5">
+                          <p className="text-[#E2E8FF80] text-[7px] sm:text-[8px] mt-1.5 whitespace-nowrap">
                             {stat.value}
                           </p>
                         </div>
@@ -343,7 +343,7 @@ export default function Home() {
                 <button
                   key={tab}
                   onClick={() => setSelectedTab(tab)}
-                  className={`rounded-xl w-[143px] h-[34px] transition text-xs mb-2 mr-6 ${
+                  className={`rounded-xl w-auto px-2 sm:px-3 h-[32px] sm:h-[34px] transition text-[10px] sm:text-xs mb-2 mr-2 sm:mr-6 ${
                     selectedTab === tab || (index === 0 && selectedTab === "Analytics")
                       ? "bg-linear-to-br from-[#040E16] via-[#040E16] to-[#174F7C] text-[#E2E8FF] border border-[#E2E8FF0D] text-semibold"
                       : "bg-transparent text-[#E2E8FF99] hover:text-[#E2E8FF]"
@@ -358,11 +358,11 @@ export default function Home() {
           <div className="h-px flex-1 bg-[#E2E8FF0D] mx-2 sm:mx-4" />
 
           {/* Main Grid Section */}
-          <section className="mt-5 grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 px-2 sm:px-4 lg:px-5">
+          <section className="mt-4 sm:mt-5 grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-6 lg:gap-8 px-1 sm:px-4 lg:px-5">
             {/* Left Column */}
-            <div className="space-y-4 sm:space-y-6 w-full">
+            <div className="space-y-2 sm:space-y-6 w-full">
               {/* Cluster Skill Matrix */}
-              <div className="rounded-lg border border-[#E2E8FF0A] bg-[#030b17] py-6 bg-linear-to-br from-[#040E16] via-[#040E16] to-[#174F7C] w-full min-h-[300px] sm:min-h-[400px]">
+              <div className="rounded-lg border border-[#E2E8FF0A] bg-[#030b17] py-3 sm:py-6 bg-linear-to-br from-[#040E16] via-[#040E16] to-[#174F7C] w-full min-h-[250px] sm:min-h-[400px]">
                 <div className="flex flex-wrap items-center justify-between gap-4">
                   <div>
                     <p className="text-[10px] font-medium border border-[#E2E8FF0D] ml-5 bg-[#0D171F] rounded-lg w-[109px] h-[31px] flex items-center justify-center text-[#B3B3B3]">
@@ -376,11 +376,11 @@ export default function Home() {
                     aria-hidden
                     className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-[#E2E8FF1A] md:block"
                   />
-                  <div className="grid gap-4 md:grid-cols-2">
+                  <div className="grid gap-2 sm:gap-4 grid-cols-4 sm:grid-cols-2">
                     {dashboardData.clusterColumns.map((column) => (
                       <div
                         key={column.id}
-                        className="border text-xs border-[#E2E8FF26] bg-linear-to-br ml-7 text-[#21B9E8] from-[#126882] via-[#126882] to-[#21B9E8] w-[37px] h-[27px] rounded-lg flex items-center justify-center"
+                        className="border text-[8px] sm:text-xs border-[#E2E8FF26] bg-linear-to-br ml-1 sm:ml-7 text-[#21B9E8] from-[#126882] via-[#126882] to-[#21B9E8] w-[28px] sm:w-[37px] h-[22px] sm:h-[27px] rounded-lg flex items-center justify-center"
                       >
                         {column.value}
                       </div>
@@ -390,21 +390,21 @@ export default function Home() {
               </div>
 
               {/* Education Progress */}
-              <div className="rounded-lg border border-[#E2E8FF0A] p-6 text-[#fdeeb0] w-full min-h-[250px] sm:min-h-[280px]">
-                <div className="flex flex-wrap items-center justify-between gap-4">
+              <div className="rounded-lg border border-[#E2E8FF0A] p-3 sm:p-6 text-[#fdeeb0] w-full min-h-[220px] sm:min-h-[280px]">
+                <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4">
                   <div>
-                    <p className="text-[10px] font-medium bg-[#21201A80] text-[#E1D082] border border-[#E2E8FF0D] rounded-lg w-[113px] h-[31px] flex items-center justify-center">
+                    <p className="text-[8px] sm:text-[10px] font-medium bg-[#21201A80] text-[#E1D082] border border-[#E2E8FF0D] rounded-lg w-auto px-2 py-1.5 sm:w-[113px] sm:h-[31px] flex items-center justify-center">
                       Education progress
                     </p>
                   </div>
                 </div>
-                <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
+                <div className="mt-3 sm:mt-6 grid gap-2 sm:gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
                   {dashboardData.executeMetrics.map((metric) => (
                     <div
                       key={metric.label}
-                      className="px-4 py-5 text-white flex gap-3"
+                      className="px-2 sm:px-4 py-3 sm:py-5 text-white flex gap-2 sm:gap-3"
                     >
-                      <div className="border rounded-full border-[#E2E8FF0D] w-[50px] h-[50px] flex items-center justify-center bg-[#101A21]">
+                      <div className="border rounded-full border-[#E2E8FF0D] w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] flex items-center justify-center bg-[#101A21] shrink-0">
                         <Image
                           src="/elements3.png"
                           alt=""
@@ -413,9 +413,9 @@ export default function Home() {
                           className="w-[15.83px] h-[16.67px]"
                         />
                       </div>
-                      <div>
-                        <p className="text-xs text-[#A7A7A7]">{metric.label}</p>
-                        <p className="mt-1 text-[10px] font-semibold border-2 border-[#E2E8FF0D] w-[42px] rounded-md h-[21px] flex items-center justify-center bg-[#101A21]">
+                      <div className="min-w-0">
+                        <p className="text-[8px] sm:text-xs text-[#A7A7A7] truncate">{metric.label}</p>
+                        <p className="mt-1 text-[8px] sm:text-[10px] font-semibold border-2 border-[#E2E8FF0D] w-auto px-1.5 rounded-md h-[18px] sm:h-[21px] flex items-center justify-center bg-[#101A21]">
                           {metric.value}
                         </p>
                       </div>
@@ -425,7 +425,7 @@ export default function Home() {
               </div>
 
               {/* Skill Chain */}
-              <div className="rounded-lg border border-[#E2E8FF0A] bg-[#060c16] p-6 w-full min-h-[100px]">
+              <div className="rounded-lg border border-[#E2E8FF0A] bg-[#060c16] p-3 sm:p-6 w-full min-h-[90px]">
                 <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
                   <div>
                     <Image
@@ -433,19 +433,18 @@ export default function Home() {
                       alt=""
                       width={0}
                       height={0}
-                      className="w-[50px] h-[50px]"
+                      className="w-[35px] sm:w-[50px] h-[35px] sm:h-[50px]"
                     />
                   </div>
-                  <div>
-                    <p className="text-xs font-normal text-[#E2E8FF80]">
+                  <div className="min-w-0">
+                    <p className="text-[8px] sm:text-xs font-normal text-[#E2E8FF80]">
                       Skill chain
                     </p>
-                    <p className="text-md font-medium text-[#E2E8FF] mb-2 mt-1">
+                    <p className="text-sm sm:text-md font-medium text-[#E2E8FF] mb-1 sm:mb-2 mt-0.5 sm:mt-1 truncate">
                       {dashboardData.skillChainData.name}
                     </p>
-                    <div className="border border-[#E2E8FF0D] text-[10px] rounded-md w-[42px] h-[21px] flex items-center justify-center bg-[#101A21]">
-                      {dashboardData.skillChainData.completed}/
-                      {dashboardData.skillChainData.total}
+                    <div className="border border-[#E2E8FF0D] text-[8px] sm:text-[10px] rounded-md w-auto px-1.5 h-[18px] sm:h-[21px] flex items-center justify-center bg-[#101A21]">
+                      {dashboardData.skillChainData.completed}/{dashboardData.skillChainData.total}
                     </div>
                   </div>
                 </div>
@@ -453,15 +452,15 @@ export default function Home() {
             </div>
 
             {/* Right Column - Skill Progression */}
-            <div className="space-y-6 w-full">
-              <div className="rounded-[14px] border border-[#FFFFFF14] bg-[#040E16] p-6 w-full min-h-[600px] sm:min-h-[700px] lg:min-h-[880px]">
-                <div className="flex items-center justify-center w-[133px] h-[31px] text-[#8282E10D] border border-[#E2E8FF0D] rounded-lg bg-[#8282E10D]">
-                  <p className="text-[10px] font-medium text-[#8282E1]">
+            <div className="space-y-4 sm:space-y-6 w-full">
+              <div className="rounded-[14px] border border-[#FFFFFF14] bg-[#040E16] p-3 sm:p-6 w-full min-h-[500px] sm:min-h-[700px] lg:min-h-[880px]">
+                <div className="flex items-center justify-center w-auto px-2 h-[28px] sm:h-[31px] text-[#8282E10D] border border-[#E2E8FF0D] rounded-lg bg-[#8282E10D]">
+                  <p className="text-[8px] sm:text-[10px] font-medium text-[#8282E1] whitespace-nowrap">
                     Career skill progression
                   </p>
                 </div>
-                <div className="relative mt-6 flex min-h-[360px] items-center justify-center">
-                  <div className="relative flex h-64 w-64 items-center justify-center rounded-full bg-[conic-gradient(#1CB948_0deg,#2D47C8_50deg,#C32DC8CC_100deg,#30FFFFB2_150deg,#30FFFFB2_200deg,#C82D2F_250deg,#9D9D9D_300deg,#FF7E05CC_360deg)]"
+                <div className="relative mt-4 sm:mt-6 flex min-h-[280px] sm:min-h-[360px] items-center justify-center">
+                  <div className="relative flex h-48 sm:h-64 w-48 sm:w-64 items-center justify-center rounded-full bg-[conic-gradient(#1CB948_0deg,#2D47C8_50deg,#C32DC8CC_100deg,#30FFFFB2_150deg,#30FFFFB2_200deg,#C82D2F_250deg,#9D9D9D_300deg,#FF7E05CC_360deg)]"
                   title="No data available">
                     <div className="absolute inset-6 rounded-full bg-[#040817]" />
                     <div className="relative z-10 text-center">
@@ -484,21 +483,21 @@ export default function Home() {
                 </div>
 
                 {/* Legend */}
-                <ul className="mt-12 space-y-4 text-xs text-[#E2E8FFB2] flex flex-col items-center justify-center">
+                <ul className="mt-6 sm:mt-12 space-y-2 sm:space-y-4 text-[8px] sm:text-xs text-[#E2E8FFB2] flex flex-col items-center justify-center">
                   {dashboardData.skillProgression.map((item, index) => (
-                    <li key={`skill-${index}`} className="w-[266px]">
-                      <div className="flex items-center w-full">
-                        <div className="flex items-center gap-3">
-                          <span>{item.label}</span>
+                    <li key={`skill-${index}`} className="w-full sm:w-[266px] px-2 sm:px-0">
+                      <div className="flex items-center w-full gap-2">
+                        <div className="flex items-center gap-1 sm:gap-3 flex-1 min-w-0">
+                          <span className="truncate">{item.label}</span>
                           <span
-                            className="flex-shrink-0 inline-block h-[9px] w-[14px] rounded-full mr-1"
+                            className="shrink-0 inline-block h-[9px] w-[14px] rounded-full"
                             style={{ background: item.gradient }}
                           />
                         </div>
-                        <span className="text-white/60 text-xs">
+                        <span className="text-white/60 text-[8px] sm:text-xs whitespace-nowrap">
                           {item.percentage}%
                         </span>
-                        <div className="h-[2px] flex-1 bg-[#E2E8FF0D] mx-2" />
+                        <div className="h-[2px] flex-1 bg-[#E2E8FF0D] hidden sm:block" />
                       </div>
                     </li>
                   ))}
@@ -508,21 +507,21 @@ export default function Home() {
           </section>
 
           {/* Study Time Section */}
-          <section className="mt-2 space-y-6 ml-2 sm:ml-5 mr-2 sm:mr-3 mb-12">
-            <div className="rounded-[14px] border w-full h-auto border-[#E2E8FF0A] bg-[#051022] p-4 sm:p-6 shadow-[0_20px_60px_rgba(3,10,22,0.45)]">
-              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                <div className="flex items-center gap-2">
-                  <p className="text-[10px] font-semibold bg-[#1C2112] text-[#E1D082] border border-[#2A3220] rounded-lg w-[96px] h-[31px] flex items-center justify-center tracking-wide">
+          <section className="mt-2 space-y-4 sm:space-y-6 ml-1 sm:ml-5 mr-1 sm:mr-3 mb-12 px-1 sm:px-0">
+            <div className="rounded-[14px] border w-full h-auto border-[#E2E8FF0A] bg-[#051022] p-3 sm:p-6 shadow-[0_20px_60px_rgba(3,10,22,0.45)]">
+              <div className="flex flex-col gap-2 sm:gap-4 md:flex-row md:items-center md:justify-between">
+                <div className="flex items-center gap-1 sm:gap-2 flex-wrap">
+                  <p className="text-[8px] sm:text-[10px] font-semibold bg-[#1C2112] text-[#E1D082] border border-[#2A3220] rounded-lg w-auto px-2 py-1.5 sm:w-[96px] sm:h-[31px] flex items-center justify-center tracking-wide">
                     Study time
                   </p>
-                  <div className="text-[10px] text-[#E2E8FF] border border-[#182233] bg-[#0B1625] rounded-lg w-[138px] h-[31px] flex items-center justify-center gap-2 px-3">
+                  <div className="text-[8px] sm:text-[10px] text-[#E2E8FF] border border-[#182233] bg-[#0B1625] rounded-lg w-auto px-2 py-1.5 sm:w-[138px] sm:h-[31px] flex items-center justify-center gap-1 sm:gap-2">
                     <Calendar className="w-3.5 h-3.5 text-[#E2E8FF99]" />
                     <span>{new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</span>
                   </div>
                 </div>
-                <button className="flex items-center cursor-pointer gap-2 rounded-lg border border-[#151F30] bg-[#0A1525] px-4 py-2 text-[10px] font-semibold text-[#E2E8FF] shadow-[0_5px_25px_rgba(6,15,30,0.6)] hover:bg-[#0A1525]/80">
-                  <RotateCcw className="h-3.5 w-3.5 text-[#8FB9FF]" />
-                  Reset
+                <button className="flex items-center cursor-pointer gap-1 sm:gap-2 rounded-lg border border-[#151F30] bg-[#0A1525] px-2 sm:px-4 py-1.5 sm:py-2 text-[8px] sm:text-[10px] font-semibold text-[#E2E8FF] shadow-[0_5px_25px_rgba(6,15,30,0.6)] hover:bg-[#0A1525]/80 whitespace-nowrap">
+                  <RotateCcw className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-[#8FB9FF]" />
+                  <span className="hidden sm:inline">Reset</span>
                 </button>
               </div>
 
