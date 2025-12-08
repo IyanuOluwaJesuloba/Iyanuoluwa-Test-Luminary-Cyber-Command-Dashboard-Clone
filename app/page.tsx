@@ -187,18 +187,18 @@ export default function Home() {
   return (
     <div className={`${inter.className} min-h-screen bg-[#040E16] text-white`}>
       <Sidebar />
-      <div className="ml-16">
+      <div className="ml-16 sm:ml-20 lg:ml-20 w-[calc(100%-4rem)] sm:w-[calc(100%-5rem)]">
         <Header breadcrumbTitle="Cyber Command"/>
-        <div className="px-6 py-4">
+        <div className="px-4 sm:px-6 py-4">
           {/* Tab Navigation */}
-          <nav className="flex flex-wrap gap-2 text-xs ml-4">
+          <nav className="flex flex-wrap gap-2 text-xs ml-2 sm:ml-4">
             {tabs.map((tab, index) => (
               <button
                 key={tab}
-                className={`rounded-[10px] px-4 py-2 transition text-xs ${
+                className={`rounded-[10px] px-3 sm:px-4 py-2 transition text-xs whitespace-nowrap ${
                   index === 0
-                    ? "bg-[#040E16] text-[#E2E8FF] border border-[#E2E8FF0D] w-[143px] h-[34px] font-semibold"
-                    : "text-[#E2E8FF99] w-[143px] h-[34px]"
+                    ? "bg-[#040E16] text-[#E2E8FF] border border-[#E2E8FF0D] font-semibold"
+                    : "text-[#E2E8FF99] hover:text-[#E2E8FF]"
                 }`}
               >
                 {tab}
@@ -207,22 +207,22 @@ export default function Home() {
           </nav>
 
           {/* Main Content Section */}
-          <section className="mt-8 gap-6 px-5">
-            <div className="flex w-full gap-3">
+          <section className="mt-6 sm:mt-8 gap-4 sm:gap-6 px-2 sm:px-5">
+            <div className="flex flex-col lg:flex-row w-full gap-3 sm:gap-4">
               {/* Card Section */}
-              <div className="w-1/2">
+              <div className="w-full lg:w-1/2">
                 <Image
                   src="/Card.png"
                   alt="upgrade"
                   width={0}
                   height={0}
-                  className="w-full h-full rounded-xl"
+                  className="w-full h-auto rounded-xl"
                 />
               </div>
 
-              <div className="w-1/2 flex gap-3">
+              <div className="w-full lg:w-1/2 flex flex-col sm:flex-row gap-3 sm:gap-4">
                 {/* Consistency Chain Card */}
-                <div className="rounded-[14px] border border-white/5 bg-[#040E16] p-6 w-1/2">
+                <div className="rounded-[14px] border border-white/5 bg-[#040E16] p-4 sm:p-6 w-full sm:w-1/2">
                   <div className="flex items-start justify-between mb-5">
                     <div className="border border-[#E2E8FF0D] rounded-lg bg-[#211B1A80] w-[108px] h-[31px] flex items-center justify-center">
                       <p className="text-[10px] font-semibold text-[#E18682]">
@@ -307,7 +307,7 @@ export default function Home() {
                 </div>
 
                 {/* Join Cyberspace Card */}
-                <div className="rounded-[14px] border border-white/5 bg-[#040E16] p-6 w-1/2">
+                <div className="rounded-[14px] border border-white/5 bg-[#040E16] p-4 sm:p-6 w-full sm:w-1/2">
                   <p className="text-[10px] font-medium text-[#92E182] border rounded-lg w-[99px] h-[31px] border-[#E2E8FF0D] bg-[#1B211A80] text-center pt-2">
                     Join cyberspace
                   </p>
@@ -328,7 +328,7 @@ export default function Home() {
           </section>
 
           {/* Analytics Tabs */}
-          <div className="flex flex-wrap gap-2 text-xs px-5 mt-10 border-[#E2E8FF0D]">
+          <div className="flex flex-wrap gap-2 text-xs px-2 sm:px-5 mt-8 sm:mt-10 border-[#E2E8FF0D]">
             <div>
               {analyticsOptions.map((tab, index) => (
                 <button
@@ -346,10 +346,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="h-px flex-1 bg-[#E2E8FF0D] mx-4" />
+          <div className="h-px flex-1 bg-[#E2E8FF0D] mx-2 sm:mx-4" />
 
           {/* Main Grid Section */}
-          <section className="mt-5 grid grid-cols-2 gap-16 ml-5">
+          <section className="mt-5 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-26 ml-2 sm:ml-5 mr-2 sm:mr-5">
             {/* Left Column */}
             <div className="space-y-2 w-[716px] h-[880px]">
               {/* Cluster Skill Matrix */}
@@ -445,7 +445,7 @@ export default function Home() {
 
             {/* Right Column - Skill Progression */}
             <div className="space-y-6 mr-4">
-              <div className="rounded-[14px] border border-[#FFFFFF14] bg-[#040E16] p-6 w-[615px] h-[880px]">
+              <div className="rounded-[14px] border border-[#FFFFFF14] bg-[#040E16] p-6 w-[635px] h-[880px]">
                 <div className="flex items-center justify-center w-[133px] h-[31px] text-[#8282E10D] border border-[#E2E8FF0D] rounded-lg bg-[#8282E10D]">
                   <p className="text-[10px] font-medium text-[#8282E1]">
                     Career skill progression
@@ -498,8 +498,8 @@ export default function Home() {
           </section>
 
           {/* Study Time Section */}
-          <section className="mt-2 space-y-6 ml-5 mr-5 mb-12">
-            <div className="rounded-[14px] border w-full h-[349px] border-[#E2E8FF0A] bg-[#051022] p-6 shadow-[0_20px_60px_rgba(3,10,22,0.45)]">
+          <section className="mt-2 space-y-6 ml-2 sm:ml-5 mr-2 sm:mr-3 mb-12">
+            <div className="rounded-[14px] border w-full h-auto border-[#E2E8FF0A] bg-[#051022] p-4 sm:p-6 shadow-[0_20px_60px_rgba(3,10,22,0.45)]">
               <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div className="flex items-center gap-2">
                   <p className="text-[10px] font-semibold bg-[#1C2112] text-[#E1D082] border border-[#2A3220] rounded-lg w-[96px] h-[31px] flex items-center justify-center tracking-wide">

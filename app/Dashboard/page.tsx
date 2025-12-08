@@ -66,6 +66,10 @@ export default function Dashboard() {
    const [dashboardData, setDashboardData] = useState<DashboardData | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [studyData, setStudyData] = useState<Array<{day: number, hours: number}>>(Array.from({ length: 31 }, (_, i) => ({
+      day: 9 + i,
+      hours: i === 19 ? 6 : Math.random() * 2 + 0.5
+    })));
 
     useEffect(() => {
         const fetchDashboardData = async () => {
@@ -142,9 +146,8 @@ export default function Dashboard() {
     { week: 'Week 1', status: 'Accomplished', progress: 100 },
     { week: 'Week 2', status: 'Accomplished', progress: 100 },
     { week: 'Week 3', status: 'Unaccomplished', progress: 50 },
-    { week: 'Week 4', status: 'Unaccomplished', progress: 50 }
-  ];
-
+    { week: 'Week 4', status: 'Unaccomplished', progress: 50 },
+  ]
   const tabs = [
     "Cyber Command",
     "Overview",
@@ -182,11 +185,10 @@ export default function Dashboard() {
     { name: 'Specialized Domain (Ghost, IOT, Mobile, SCADA/ICS)', progress: 75, color: 'bg-red-600' },
     { name: 'Vulnerability Researcher', progress: 85, color: 'bg-cyan-500' }
   ];
-
-  const studyData = Array.from({ length: 31 }, (_, i) => ({
-    day: 9 + i,
-    hours: i === 19 ? 6 : Math.random() * 2 + 0.5
-  }));
+  //  const studyDta = Array.from({ length: 31 }, (_, i) => ({
+  //   day: 9 + i,
+  //   hours: i === 19 ? 6 : Math.random() * 2 + 0.5
+  // }));
 
   // const studyAxisLabels = Array.from({ length: 25 }, (_, i) => {
   //   const dayNum = 9 + i;
@@ -196,21 +198,23 @@ export default function Dashboard() {
   return (
     <div className={`${inter.className} min-h-screen bg-[#040E16] text-white`}>
       {/* Header */}
-       <Sidebar />
-       <div className="ml-16">
+       <div className="hidden sm:block">
+         <Sidebar />
+       </div>
+       <div className="ml-16 sm:ml-20 lg:ml-20 w-[calc(100%-4rem)] sm:w-[calc(100%-5rem)]">
        <Header breadcrumbTitle='Cyber Command'/>
 
       {/* Main Content */}
-        <div className="px-6 py-4">
+        <div className="px-4 sm:px-6 py-4">
           {/* Tab Navigation */}
-          <nav className="flex flex-wrap gap-2 text-xs ml-4">
+          <nav className="flex flex-wrap gap-2 text-xs ml-2 sm:ml-4">
             {tabs.map((tab, index) => (
               <button
                 key={tab}
-                className={`rounded-[10px] px-4 py-2 transition text-xs ${
+                className={`rounded-[10px] px-3 sm:px-4 py-2 transition text-xs whitespace-nowrap ${
                   index === 0
-                    ? "bg-[#040E16] text-[#E2E8FF] border border-[#E2E8FF0D] w-[143px] h-[34px] font-semibold"
-                    : "text-[#E2E8FF99] w-[143px] h-[34px]"
+                    ? "bg-[#040E16] text-[#E2E8FF] border border-[#E2E8FF0D] font-semibold"
+                    : "text-[#E2E8FF99] hover:text-[#E2E8FF]"
                 }`}
               >
                 {tab}
@@ -471,7 +475,7 @@ export default function Dashboard() {
                         </div>
                       </div>
                       {/* Career Skills Wheel */}
-                      <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-xl p-6 w-[615px] h-[878px]">
+                      <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-xl p-6 w-[605px] h-[878px]">
                           <div className="">
                             <div className="flex items-center justify-center w-[133px] h-[31px] text-[#8282E10D] border border-[#E2E8FF0D] rounded-lg bg-[#8282E10D]">
                               <p className="text-[10px] font-medium text-[#8282E1]">
@@ -549,7 +553,13 @@ export default function Dashboard() {
                             <span>{new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</span>
                           </div>
                         </div>
-                        <button className="flex items-center gap-2 rounded-lg border border-[#151F30] bg-[#0A1525] px-4 py-2 text-[10px] font-semibold text-[#E2E8FF] shadow-[0_5px_25px_rgba(6,15,30,0.6)] hover:bg-[#0A1525]/80">
+                       <button 
+                          onClick={() => setStudyData(Array.from({ length: 25 }, (_, i) => ({ 
+                            day: 9 + i,
+                            hours: 0 
+                          })))} 
+                          className="flex items-center gap-2 rounded-lg border border-[#151F30] bg-[#0A1525] px-4 py-2 text-[10px] font-semibold text-[#E2E8FF] shadow-[0_5px_25px_rgba(6,15,30,0.6)] hover:bg-[#0A1525]/80"
+                        >
                           <RotateCcw className="h-3.5 w-3.5 text-[#8FB9FF]" />
                           Reset
                         </button>
@@ -572,9 +582,9 @@ export default function Dashboard() {
                             <div className="absolute inset-x-8 bottom-14 h-12 bg-linear-to-b from-[#3BC3FF66] via-[#0A283F] to-transparent opacity-70 blur-[30px]" />
                           </div>
                           <div className="mt-6 flex items-center justify-between text-[10px] text-[#8EA3C0]">
-                            {studyData.map((label) => (
+                            {studyData.map((label, index) => (
                               <span
-                                key={`axis-label-${label.day}`}
+                                key={`axis-label-${label.day}-${index}`}  // Added index as additional unique identifier
                                 className="min-w-[14px] text-center"
                               >
                                 {label.day}

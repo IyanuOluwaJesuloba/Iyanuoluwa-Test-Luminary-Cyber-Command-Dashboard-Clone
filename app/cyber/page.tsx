@@ -18,6 +18,7 @@ type Course = {
 
 export default function CyberSecurityDashboard() {
   const router = useRouter();
+  const handleBack = () => router.back();
   const courses: Course[] = [
     {
       id: 1,
@@ -70,16 +71,18 @@ export default function CyberSecurityDashboard() {
   ];
 
   return (
-    <div className="min-h-screen w-full bg-[#040E16] text-white font-sans flex">
+    <div className="min-h-screen w-full bg-[#040E16] text-white font-sans flex flex-col lg:flex-row">
       {/* Header */}
       <Sidebar/>
-      <div className='ml-16'>
+      <div className='ml-16 sm:ml-20 lg:ml-20 w-[calc(100%-4rem)] sm:w-[calc(100%-5rem)] flex flex-col'>
       <Header breadcrumbTitle='Offensive Operations...'/>
 
       {/* Main Content */}
-      <main className="ml-1 p-8 w-[px] h-[960px]">
+      <main className="p-4 sm:p-8 overflow-y-auto flex-1">
         <div className="flex items-center gap-3 mb-8">
-          <Image src="/elements1.png" alt="" width={0} height={0} className="w-[16px] h-[10px] text-gray-400 cursor-pointer hover:text-white" />
+          <button onClick={handleBack} className="hover:opacity-80 transition">
+            <Image src="/elements1.png" alt="Back" width={16} height={10} className="w-[16px] h-[10px] text-gray-400 hover:text-white" />
+          </button>
           <h1 className="text-sm font-semibold">Cyber command</h1>
         </div>
 
@@ -106,13 +109,13 @@ export default function CyberSecurityDashboard() {
                   className="object-cover object-top opacity-90"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                 <div className="absolute inset-0">
+                 <div className="absolute inset-0 top-60">
                   <Image
                     src="/half.png"
                     alt="Neon Circuit Overlay"
-                    fill
-                    className="object-cover object-top opacity-80 mix-blend-screen w-2 h-2"
-                    sizes=""
+                    width={200}
+                    height={200}
+                    className="object-cover object-top -top-30 opacity-80 mix-blend-screen"
                   />
                 </div>
               </div>
