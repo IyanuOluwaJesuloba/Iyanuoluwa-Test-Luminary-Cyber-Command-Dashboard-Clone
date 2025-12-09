@@ -635,7 +635,7 @@ export default function Dashboard() {
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(16,98,195,0.2),transparent_65%)]" />
                 <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(transparent_85%,rgba(255,255,255,0.03)_85%)] opacity-70" />
                 <div className="relative z-10">
-                  <div className="relative h-40 sm:h-44 w-full overflow-x-auto">
+                  <div className="relative h-40 sm:h-44 w-full">
                     <div className="absolute inset-0 flex items-stretch min-w-[600px] sm:min-w-0">
                       {studyData.map((label, index) => (
                         <span
@@ -647,7 +647,7 @@ export default function Dashboard() {
                     <div className="absolute inset-x-0 bottom-14 h-px bg-linear-to-r from-transparent via-[#3BC3FF] to-transparent" />
                     <div className="absolute inset-x-8 bottom-14 h-12 bg-linear-to-b from-[#3BC3FF66] via-[#0A283F] to-transparent opacity-70 blur-[30px]" />
                   </div>
-                  <div className="mt-6 flex items-center justify-between text-[10px] text-[#8EA3C0] overflow-x-auto">
+                  <div className="mt-6 flex items-center justify-between text-[10px] text-[#8EA3C0]">
                     {studyData.map((label, index) => (
                       <span
                         key={`axis-label-${label.day}-${index}`}
