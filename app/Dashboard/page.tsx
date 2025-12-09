@@ -506,7 +506,7 @@ export default function Dashboard() {
               <div className="rounded-lg border border-[#E2E8FF0A] bg-[#060c16] p-3 sm:p-6 w-full">
                 <div className="flex flex-col gap-3 sm:gap-4 lg:flex-row lg:items-center">
                   <Image
-                    src="/frame5.png"
+                    src="/Frame5.png"
                     alt="skill chain"
                     width={50}
                     height={50}
@@ -539,7 +539,7 @@ export default function Dashboard() {
                 <div className="relative mt-4 sm:mt-6 flex min-h-[280px] sm:min-h-[360px] items-center justify-center">
                   <div className="relative flex h-48 sm:h-64 w-48 sm:w-64 items-center justify-center rounded-full bg-[conic-gradient(#1CB948_0deg,#2D47C8_50deg,#C32DC8CC_100deg,#30FFFFB2_150deg,#30FFFFB2_200deg,#C82D2F_250deg,#9D9D9D_300deg,#FF7E05CC_360deg)]">
                     <div className="absolute inset-6 rounded-full bg-[#040817]" />
-                    <div className="relative z-10 text-center">
+                    <div className="relative z-10 text-center hidden md:block">
                       <Image
                         src="/Vector1.png"
                         alt="vector"
