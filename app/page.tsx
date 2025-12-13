@@ -63,16 +63,16 @@ export default function Home() {
   const [dashboardData, setDashboardData] = useState<DashboardData | null>(
     null
   );
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedTab, setSelectedTab] = useState("Analytics");
 
-  // Fetch data from backend
+ //Fetch data from backend
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        setLoading(true);
-        // Replace with your actual API endpoint
+        // setLoading(true);
+        // // Replace with your actual API endpoint
         const response = await fetch("/api/dashboard");
 
         if (!response.ok) {
@@ -88,7 +88,7 @@ export default function Home() {
         // Set fallback/mock data
         setDashboardData(getMockData());
       } finally {
-        setLoading(false);
+        // setLoading(false);
       }
     };
 
@@ -186,18 +186,18 @@ export default function Home() {
     return dayNum > 30 ? (dayNum - 30).toString() : dayNum.toString();
   });
 
-  if (loading) {
-    return (
-      <div
-        className={`${inter.className} min-h-screen bg-[#040E16] text-white flex items-center justify-center`}
-      >
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-          <p className="text-gray-400">Loading dashboard...</p>
-        </div>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div
+  //       className={`${inter.className} min-h-screen bg-[#040E16] text-white flex items-center justify-center`}
+  //     >
+  //       <div className="text-center">
+  //         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500 mx-auto mb-4"></div>
+  //         <p className="text-gray-400">Loading dashboard...</p>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   if (!dashboardData) {
     return (
@@ -205,15 +205,15 @@ export default function Home() {
         className={`${inter.className} min-h-screen bg-[#040E16] text-white flex items-center justify-center`}
       >
         <div className="text-center">
-          <p className="text-red-400 mb-4">
+          {/* <p className="text-red-400 mb-4">
             {error || "Failed to load dashboard"}
-          </p>
-          <button
+          </p> */}
+          {/* <button
             onClick={() => window.location.reload()}
             className="px-4 py-2 bg-cyan-600 rounded-lg text-white hover:bg-cyan-700"
           >
             Retry
-          </button>
+          </button> */}
         </div>
       </div>
     );

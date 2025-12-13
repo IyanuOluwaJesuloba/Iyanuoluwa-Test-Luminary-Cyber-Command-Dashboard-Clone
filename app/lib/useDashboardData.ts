@@ -38,7 +38,7 @@ interface DashboardData {
 
 interface UseDashboardDataReturn {
   data: DashboardData | null;
-  loading: boolean;
+  // loading: boolean;
   error: string | null;
   refetch: () => Promise<void>;
 }
@@ -51,7 +51,7 @@ export function useDashboardData(
   endpoint: string = "/api/dashboard"
 ): UseDashboardDataReturn {
   const [data, setData] = useState<DashboardData | null>(null);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const getMockData = (): DashboardData => ({
@@ -125,7 +125,7 @@ export function useDashboardData(
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setLoading(true);
+        // setLoading(true);
         setError(null);
 
         const response = await fetch(endpoint);
@@ -142,8 +142,6 @@ export function useDashboardData(
         setError(errorMessage);
         // Use mock data as fallback
         setData(getMockData());
-      } finally {
-        setLoading(false);
       }
     };
 
@@ -152,7 +150,7 @@ export function useDashboardData(
 
   const refetch = async () => {
     try {
-      setLoading(true);
+      // setLoading(true);
       setError(null);
 
       const response = await fetch(endpoint);
@@ -169,10 +167,8 @@ export function useDashboardData(
       setError(errorMessage);
       // Use mock data as fallback
       setData(getMockData());
-    } finally {
-      setLoading(false);
     }
   };
 
-  return { data, loading, error, refetch };
+  return { data, error, refetch };
 }

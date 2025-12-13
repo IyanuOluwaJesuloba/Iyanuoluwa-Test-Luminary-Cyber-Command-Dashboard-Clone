@@ -61,7 +61,7 @@ export default function Dashboard() {
   const [dashboardData, setDashboardData] = useState<DashboardData | null>(
     null
   );
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [studyData, setStudyData] = useState<
     Array<{ day: number; hours: number }>
@@ -75,7 +75,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        setLoading(true);
+        // setLoading(true);
         const response = await fetch("/api/dashboard");
 
         if (!response.ok) {
@@ -88,9 +88,10 @@ export default function Dashboard() {
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
         setDashboardData(getMockData());
-      } finally {
-        setLoading(false);
       }
+      // } finally {
+      //   setLoading(false);
+      // }
     };
 
     fetchDashboardData();
@@ -246,7 +247,7 @@ export default function Dashboard() {
       <div className="w-full md:ml-20 md:w-[calc(100%-5rem)]">
         <Header breadcrumbTitle="Cyber Command" />
         <div className="px-2 sm:px-6 py-3 sm:py-4">
-          {(loading || error) && (
+          {/* {(loading || error) && (
             <div className="mb-4 px-2 sm:px-5">
               {loading && (
                 <p className="text-xs sm:text-sm text-[#E2E8FFB2]">
@@ -257,7 +258,14 @@ export default function Dashboard() {
                 <p className="mt-1 text-[11px] sm:text-xs text-[#F5B5B5]">{}</p>
               )}
             </div>
-          )}
+          )} */}
+          {/* {error && (
+            <div className="mb-4 px-2 sm:px-5">
+              <p className="mt-1 text-[11px] sm:text-xs text-[#F5B5B5]">
+                {error}
+              </p>
+            </div>
+          )} */}
 
           {/* Tab Navigation */}
           <nav className="flex flex-nowrap sm:flex-wrap gap-1 sm:gap-2 text-[10px] sm:text-xs ml-0 sm:ml-4 overflow-x-auto pb-2 pr-2 sm:pr-4">
