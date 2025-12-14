@@ -404,7 +404,7 @@ export default function Home() {
           {/* Main Grid Section */}
           <section className="mt-4 sm:mt-5 grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-6 lg:gap-8 px-1 sm:px-4 lg:px-5">
             {/* Left Column */}
-            <div className="space-y-2 sm:space-y-6 w-full">
+            <div className="space-y-2 sm:space-y-3 w-full">
               {/* Cluster Skill Matrix */}
               <div className="rounded-lg border border-[#E2E8FF0A] bg-[#030b17] py-3 sm:py-6 bg-linear-to-br from-[#040E16] via-[#040E16] to-[#174F7C] w-full min-h-[250px] sm:min-h-[400px]">
                 <div className="flex flex-wrap items-center justify-between gap-4">
@@ -452,9 +452,9 @@ export default function Home() {
                         <Image
                           src="/elements3.png"
                           alt=""
-                          width={0}
-                          height={0}
-                          className="w-[15.83px] h-[16.67px]"
+                          width={15.83}
+                          height={16.67}
+                          className=""
                         />
                       </div>
                       <div className="min-w-0">
