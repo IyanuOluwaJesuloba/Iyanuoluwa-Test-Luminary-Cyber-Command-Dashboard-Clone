@@ -584,7 +584,7 @@ export default function Dashboard() {
                   {careerSkills.map((skill, i) => (
                     <li key={`career-skill-${i}`} className="w-full">
                       <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-                        <span className="flex-1 min-w-[120px] truncate">
+                        <span className="flex-1 min-w-[120px] truncate text-end">
                           {skill.name}
                         </span>
                         <div className="flex-1 h-[7px] sm:h-[9px] bg-slate-800/50 rounded-full overflow-hidden">
